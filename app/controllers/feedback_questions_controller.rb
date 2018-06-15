@@ -4,7 +4,9 @@ class FeedbackQuestionsController < ApplicationController
 
   # Reference a strong resource payload defined in
   # config/initializers/strong_resources.rb
-  strong_resource :feedback_question
+  strong_resource :feedback_question do
+    has_many :feedback_answers
+  end
   # Run strong parameter validation for these actions.
   # Invalid keys will be dropped.
   # Invalid value types will log or raise based on the configuration

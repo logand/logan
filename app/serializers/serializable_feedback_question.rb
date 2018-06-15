@@ -13,4 +13,6 @@ class SerializableFeedbackQuestion < JSONAPI::Serializable::Resource
   # attribute :name do
   #   @object.name.upcase
   # end
+
+  has_many :feedback_answers
 end

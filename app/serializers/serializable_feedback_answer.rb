@@ -13,4 +13,8 @@ class SerializableFeedbackAnswer < JSONAPI::Serializable::Resource
   # attribute :name do
   #   @object.name.upcase
   # end
+  attribute :answer
+
+  belongs_to :feedback_answer
+  belongs_to :feedback_response
 end
